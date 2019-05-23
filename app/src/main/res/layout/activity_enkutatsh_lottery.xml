@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EnkutatashLottery">
+
+    <TextView
+        android:id="@+id/EnkutatashtextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Ticket Number"
+        android:textSize="30sp"
+        />
+    <EditText
+        android:id="@+id/EnkutatshEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:hint="Enter your email"
+        android:layout_marginTop="80dp"/>
+
+    <Button
+        android:id="@+id/btnEnkutatashLottery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Ticket Number"
+        android:layout_below="@+id/EnkutatshEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="107dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/readAndWrite"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnEnkutatashLottery">
+        <Button
+            android:id="@+id/btnEnkutatashWrite"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Save Ticket Number"
+            android:layout_gravity="center"
+            android:layout_below="@+id/btnEnkutatashLottery"
+            android:layout_marginTop="20dp"
+
+            />
+        <!-- android:onClick="writeExternalMessage"-->
+        <Button
+            android:id="@+id/btnEnkutatashRead"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Insert Ticket Number"
+            android:layout_gravity="center"
+            android:layout_below="@+id/btnEnkutatashWrite"
+            android:layout_marginTop="20dp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/EnkutatashNumberShower"
+        android:layout_below="@+id/readAndWrite"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Number here"/>
+
+    <Button
+        android:id="@+id/btnEnkutatashUniqueNumber"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Get Unique Number"
+        android:layout_gravity="center"
+        android:layout_below="@+id/EnkutatashNumberShower"
+        android:layout_marginTop="20dp"
+        />
+
+
+</RelativeLayout>

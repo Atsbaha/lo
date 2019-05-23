@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NationalLottery">
+
+
+
+    <LinearLayout
+        android:layout_marginLeft="40dp"
+        android:orientation="vertical"
+        android:id="@+id/checkit"
+        android:layout_width="250dp"
+        android:layout_height="250dp">
+
+
+
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/button_00"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                />
+
+            <Button
+                android:id="@+id/button_01"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/button_02"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="15sp"/>
+            <Button
+                android:id="@+id/button_03"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="15sp"/>
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/button_10"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/button_11"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/button_12"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="15sp"/>
+            <Button
+                android:id="@+id/button_13"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="15sp"/>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/button_20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/button_21"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/button_22"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="15sp"/>
+            <Button
+                android:id="@+id/button_23"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="15sp"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/button_30"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/button_31"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/button_32"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="15sp"/>
+            <Button
+                android:id="@+id/button_33"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="15sp"/>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+    <!--<TextView
+       android:id="@+id/nationalLotterytextView"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:hint="Your Number"
+       android:layout_marginTop="10dp"
+      android:textSize="30sp"-->
+            />
+        <EditText
+            android:id="@+id/EnterNationalLotterEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:text="berhetewelde@gmail.com"
+            android:layout_marginTop="80dp"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp">
+
+
+        <Button
+            android:id="@+id/tryAnotherNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Another"
+            />
+
+        <!--android:onClick="ViewNumberr"-->
+        <Button
+            android:id="@+id/getNationalLotteryTicketNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get Ticket Number"
+            android:onClick="toDisable"
+            />
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".Payment">
+    <!-- android:background="@drawable/bg4"-->
+    <EditText
+        android:id="@+id/phonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="48dp"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="phone number"
+        android:textColor="#060606"
+        android:textStyle="bold"
+
+
+        />
+    <!--android:hint="@string/hint3"
+     android:autofillHints="@string/hint3"-->
+
+    <EditText
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="122dp"
+        android:ems="10"
+        android:hint="amount"
+        android:inputType="number"
+        android:textColor="#060606"
+        android:textStyle="bold"
+
+        />
+    <!--android:hint="@string/hint4"
+    android:autofillHints="@string/hint4" -->
+
+    <EditText
+        android:id="@+id/pin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="212dp"
+        android:ems="10"
+        android:hint="pin"
+        android:inputType="numberPassword"
+        android:textColor="#060606"
+        android:textStyle="bold"
+
+        />
+
+    <!--android:hint="@string/hint5"
+    android:autofillHints="@string/hint5"-->
+    <!--<Button
+       android:id="@+id/recharge"
+       android:layout_width="160dp"
+       android:layout_height="40dp"
+
+
+       android:text="recharge"
+       android:textColor="#bfbebe"
+       android:textSize="30sp" />
+
+  android:background="@drawable/buttonshape"
+   android:text="@string/gift"
+
+       android:shadowColor="#A8A8A8"
+       android:shadowDx="0"
+       android:shadowDy="0"
+       android:shadowRadius="5"
+          android:layout_alignParentStart="true"
+       android:layout_alignParentLeft="true"
+       android:layout_alignParentTop="true"
+       android:layout_marginStart="29dp"
+       android:layout_marginLeft="29dp"
+       android:layout_marginTop="327dp"-->
+
+    <Button
+        android:id="@+id/recharge"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="300dp"
+        android:text="Recharge"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/btnNumber"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="380dp"
+        android:text="Next"
+        android:layout_centerHorizontal="true"/>
+
+
+</RelativeLayout>

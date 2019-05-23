@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+<item
+    android:id="@+id/menu_subdiv_general"
+    android:title="@string/general">
+    <menu>
+        <item
+            android:id="@+id/menu_new_lottery"
+            android:title="@string/new_lottery"
+            android:icon="@drawable/ic_add_circle_outline_black_24dp"/>
+        <item
+            android:id="@+id/menu_history"
+            android:title="@string/lottery_history"
+            android:icon="@drawable/ic_history_black_24dp"/>
+    </menu>
+</item>
+
+<item
+    android:id="@+id/menu_subdiv_active_lottery"
+    android:title="@string/active_lottery">
+    <menu>
+        <item
+            android:id="@+id/menu_home"
+            android:title="@string/home"
+            android:icon="@drawable/ic_home_black_24dp"/>
+        <item
+            android:id="@+id/menu_tickets"
+            android:title="@string/tickets"
+            android:icon="@drawable/ic_description_black_24dp"/>
+        <item
+            android:id="@+id/menu_winners"
+            android:title="@string/winners"
+            android:icon="@drawable/ic_star_border_black_24dp"/>
+        <item
+            android:id="@+id/menu_prizes"
+            android:title="@string/prizes"
+            android:icon="@drawable/ic_redeem_black_24dp"/>
+    </menu>
+</item>
+
+
+<item
+    android:id="@+id/menu_subdiv_misc"
+    android:title="@string/misc">
+    <menu>
+        <item
+            android:id="@+id/menu_preferences"
+            android:title="@string/settings"
+            android:icon="@drawable/ic_settings_black_24dp"/>
+        <item
+            android:id="@+id/menu_about"
+            android:title="@string/about"
+            android:icon="@drawable/ic_info_outline_black_24dp"/>
+    </menu>
+</item>
+</menu>
