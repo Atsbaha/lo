@@ -5,21 +5,21 @@ public class ZhonModel {
 
     String email;
     String ticktNumber;
-    String UniquqNumber;
+    String uniquqNumber;
 
     public String getUniquqNumber() {
-        return UniquqNumber;
+        return uniquqNumber;
     }
 
     public void setUniquqNumber(String uniquqNumber) {
-        UniquqNumber = uniquqNumber;
+        this.uniquqNumber = uniquqNumber;
     }
 
 
-    public ZhonModel(String email, String ticktNumber,String UniquqNumber) {
+    public ZhonModel(String email, String ticktNumber,String uniquqNumber) {
         this.email = email;
         this.ticktNumber = ticktNumber;
-        this.UniquqNumber=UniquqNumber;
+        this.uniquqNumber=uniquqNumber;
     }
 
     public String getEmail() {

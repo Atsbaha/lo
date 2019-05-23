@@ -64,12 +64,6 @@ public class ZhonLottery extends AppCompatActivity {
             }
         });
 
-        btnUniqueNumber.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                btnUniqueNumber.setText(GetUniqueNumber(10));
-            }
-        });
 
 
 
@@ -88,14 +82,17 @@ public class ZhonLottery extends AppCompatActivity {
     }
 
     private static String GetUniqueNumber(int i) {
-    final String characters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+     String characters="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
     StringBuilder result=new StringBuilder();
     while (i>0){
         Random random=new Random();
         result.append(characters.charAt(random.nextInt(characters.length())));
         i--;
+
     }
-    return result.toString();
+    String x=result.toString();
+    return x;
+
 
     }
 
@@ -186,6 +183,13 @@ public class ZhonLottery extends AppCompatActivity {
               mytext.setText(myString);
 
 //        LoginActivity loginActivity=new LoginActivity();
+
+
+                     btnUniqueNumber.setText(GetUniqueNumber(10));
+
+
+
+
 
 
               ZhonModel zhonModel = new ZhonModel(Email, myString,GetUniqueNumber(10));

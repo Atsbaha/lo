@@ -2,6 +2,8 @@ package com.example.lo.viewModels;
 
 public class GenaModel {
     String email;
+    String ticktNumber;
+    String uniquqNumber;
 
     public String getEmail() {
         return email;
@@ -20,15 +22,14 @@ public class GenaModel {
     }
 
     public String getUniquqNumber() {
-        return UniquqNumber;
+        return uniquqNumber;
     }
 
     public void setUniquqNumber(String uniquqNumber) {
-        UniquqNumber = uniquqNumber;
+        this.uniquqNumber = uniquqNumber;
     }
 
-    String ticktNumber;
-    String UniquqNumber;
+
 
     public GenaModel() {
     }
@@ -37,7 +38,7 @@ public class GenaModel {
     public GenaModel(String email, String ticktNumber, String uniquqNumber) {
         this.email = email;
         this.ticktNumber = ticktNumber;
-        UniquqNumber = uniquqNumber;
+        uniquqNumber = uniquqNumber;
     }
 
 

@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView"
-        android:hint="Enter your email"
+        android:text="berhetewelde@gmail.com"
         android:layout_marginTop="80dp"/>
 
     <Button

@@ -2,43 +2,43 @@ package com.example.lo.viewModels;
 
 public class EnkutatashModel {
 
-    String Useremail;
-    String UserticktNumber;
-    String TicketUniquqNumber;
+    String useremail;
+    String userticktNumber;
+    String ticketUniquqNumber;
 
     public EnkutatashModel() {
     }
 
     public String getUseremail() {
-        return Useremail;
+        return useremail;
     }
 
     public void setUseremail(String useremail) {
-        Useremail = useremail;
+        this.useremail = useremail;
     }
 
     public String getUserticktNumber() {
-        return UserticktNumber;
+        return userticktNumber;
     }
 
     public void setUserticktNumber(String userticktNumber) {
-        UserticktNumber = userticktNumber;
+        this.userticktNumber = userticktNumber;
     }
 
     public String getTicketUniquqNumber() {
-        return TicketUniquqNumber;
+        return ticketUniquqNumber;
     }
 
     public void setTicketUniquqNumber(String ticketUniquqNumber) {
-        TicketUniquqNumber = ticketUniquqNumber;
+        this.ticketUniquqNumber = ticketUniquqNumber;
     }
 
 
 
     public EnkutatashModel(String useremail, String userticktNumber, String ticketUniquqNumber) {
-        Useremail = useremail;
-        UserticktNumber = userticktNumber;
-        TicketUniquqNumber = ticketUniquqNumber;
+        this.useremail = useremail;
+        this.userticktNumber = userticktNumber;
+        this.ticketUniquqNumber = ticketUniquqNumber;
     }
 
 

@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/genatextView"
-        android:hint="Enter your email"
+        android:text="berheteweld@gmail.com"
         android:layout_marginTop="80dp"/>
 
     <Button
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:text="Get Unique Number"
         android:layout_gravity="center"
-        android:layout_below="@+id/NumberShower"
+        android:layout_below="@+id/genaNumberShower"
         android:layout_marginTop="20dp"
         />
 

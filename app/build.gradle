@@ -29,7 +29,8 @@ android {
 
 
         manifestPlaceholders = [
-                yenepayReturnScheme: "com.lo.yenepay"
+                yenepayReturnScheme: "com.example.lo.yenepay"
+
         ]
 
 
