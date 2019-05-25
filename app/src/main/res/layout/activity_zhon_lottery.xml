@@ -30,26 +30,23 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="107dp"
         />
-    <!--android:onClick="generateTicketNumber"-->
 
-
-
-    <!--<EditText
-        android:id="@+id/edittext"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:hint="Enter a message"
-        android:layout_marginTop="40dp"
+    <Button
+        android:id="@+id/btnUniqueNumber"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Get Unique Number"
+        android:layout_gravity="center"
         android:layout_below="@+id/btnZhonLottery"
-        android:gravity="top"
-        />-->
+        android:layout_marginTop="20dp"/>
+
 
     <LinearLayout
         android:id="@+id/readAndWrite"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnZhonLottery">
+        android:layout_below="@+id/btnUniqueNumber">
     <Button
         android:id="@+id/btnWrite"
         android:layout_width="200dp"
@@ -80,14 +77,7 @@
         android:layout_height="wrap_content"
         android:text="Your Number here"/>
 
-    <Button
-        android:id="@+id/btnUniqueNumber"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Get Unique Number"
-        android:layout_gravity="center"
-        android:layout_below="@+id/NumberShower"
-        android:layout_marginTop="20dp"
+
         />
 
 

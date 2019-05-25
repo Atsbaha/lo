@@ -7,6 +7,13 @@ public class EnkutatashModel {
     String ticketUniquqNumber;
 
     public EnkutatashModel() {
+
+    }
+
+    public EnkutatashModel(String useremail, String userticktNumber, String ticketUniquqNumber) {
+        this.useremail = useremail;
+        this.userticktNumber = userticktNumber;
+        this.ticketUniquqNumber = ticketUniquqNumber;
     }
 
     public String getUseremail() {
@@ -35,11 +42,7 @@ public class EnkutatashModel {
 
 
 
-    public EnkutatashModel(String useremail, String userticktNumber, String ticketUniquqNumber) {
-        this.useremail = useremail;
-        this.userticktNumber = userticktNumber;
-        this.ticketUniquqNumber = ticketUniquqNumber;
-    }
+
 
 
 }

@@ -74,8 +74,16 @@ public class ZhonLottery extends AppCompatActivity {
             public void onClick(View v) {
                 generateTicketNumber();
                 btn.setEnabled(false);
-                btn.setVisibility(View.GONE);
 
+                btnUniqueNumber.setText(GetUniqueNumber(10));
+//                DatabaseReference x= FirebaseDatabase.getInstance().getReference().child("National Lottery").child("frequency");
+//                DatabaseReference x =FirebaseDatabase.getInstance().getReference().child("Zhon Lottery Email And TicketNumber").child("uniquqNumber");
+//                String y=String.valueOf(x);
+//                int z=Integer.parseInt(y);
+
+//                btnUniqueNumber.setText(FirebaseDatabase.getInstance().getReference().child("Zhon Lottery Email And TicketNumber").child("uniquqNumber"));
+
+//                btnUniqueNumber.setText(z);
             }
         });
 
@@ -90,8 +98,8 @@ public class ZhonLottery extends AppCompatActivity {
         i--;
 
     }
-    String x=result.toString();
-    return x;
+        return result.toString();
+
 
 
     }
@@ -185,7 +193,7 @@ public class ZhonLottery extends AppCompatActivity {
 //        LoginActivity loginActivity=new LoginActivity();
 
 
-                     btnUniqueNumber.setText(GetUniqueNumber(10));
+//                     btnUniqueNumber.setText(GetUniqueNumber(10));
 
 
 

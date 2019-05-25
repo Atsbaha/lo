@@ -5,13 +5,13 @@ public class NationalLotteryModel {
 
     String emaillAdress;
     String natinalticketNumberr;
-    String frequency;
+    int frequency;
     String birrAmount;
 
     public NationalLotteryModel() {
     }
 
-    public NationalLotteryModel(String emaillAdress, String natinalticketNumberr, String frequency, String birrAmount) {
+    public NationalLotteryModel(String emaillAdress, String natinalticketNumberr, int frequency, String birrAmount) {
         this.emaillAdress = emaillAdress;
         this.natinalticketNumberr = natinalticketNumberr;
         this.frequency = frequency;
@@ -34,11 +34,11 @@ public class NationalLotteryModel {
         this.natinalticketNumberr = natinalticketNumberr;
     }
 
-    public String getFrequency() {
+    public int getFrequency() {
         return frequency;
     }
 
-    public void setFrequency(String frequency) {
+    public void setFrequency(int frequency) {
         this.frequency = frequency;
     }
 

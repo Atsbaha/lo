@@ -4,6 +4,14 @@ public class InstantModel {
     String emaill;
     String ticketNumberr;
 
+
+    public InstantModel() {
+    }
+
+    public InstantModel(String emaill, String ticketNumberr) {
+        this.emaill = emaill;
+        this.ticketNumberr = ticketNumberr;
+    }
     public String getEmaill() {
         return emaill;
     }
@@ -20,10 +28,7 @@ public class InstantModel {
         this.ticketNumberr = ticketNumberr;
     }
 
-    public InstantModel(String emaill, String ticketNumberr) {
-        this.emaill = emaill;
-        this.ticketNumberr = ticketNumberr;
-    }
+
 
 
 }

@@ -6,6 +6,16 @@ public class ZhonModel {
     String email;
     String ticktNumber;
     String uniquqNumber;
+    public ZhonModel() {
+    }
+
+    public ZhonModel(String email, String ticktNumber,String uniquqNumber) {
+        this.email = email;
+        this.ticktNumber = ticktNumber;
+        this.uniquqNumber=uniquqNumber;
+    }
+
+
 
     public String getUniquqNumber() {
         return uniquqNumber;
@@ -16,11 +26,7 @@ public class ZhonModel {
     }
 
 
-    public ZhonModel(String email, String ticktNumber,String uniquqNumber) {
-        this.email = email;
-        this.ticktNumber = ticktNumber;
-        this.uniquqNumber=uniquqNumber;
-    }
+
 
     public String getEmail() {
         return email;

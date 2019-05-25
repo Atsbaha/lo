@@ -5,6 +5,16 @@ public class GenaModel {
     String ticktNumber;
     String uniquqNumber;
 
+    public GenaModel() {
+    }
+
+    public GenaModel(String email, String ticktNumber, String uniquqNumber) {
+        this.email = email;
+        this.ticktNumber = ticktNumber;
+        uniquqNumber = uniquqNumber;
+    }
+
+
     public String getEmail() {
         return email;
     }
@@ -31,15 +41,8 @@ public class GenaModel {
 
 
 
-    public GenaModel() {
-    }
 
 
-    public GenaModel(String email, String ticktNumber, String uniquqNumber) {
-        this.email = email;
-        this.ticktNumber = ticktNumber;
-        uniquqNumber = uniquqNumber;
-    }
 
 
 
