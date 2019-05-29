@@ -2,6 +2,7 @@ package com.example.lo;
 
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -10,8 +11,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.lo.viewModels.ZhonModel;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -29,7 +33,7 @@ public class ZhonLottery extends AppCompatActivity {
 
 
 
-    DatabaseReference databaseReference;
+    DatabaseReference databaseReference,btnReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,17 +69,28 @@ public class ZhonLottery extends AppCompatActivity {
         });
 
 
+//        String key=databaseReference.push().getKey();
 
 
         databaseReference= FirebaseDatabase.getInstance().getReference().child("Zhon Lottery Email And TicketNumber");
 
-        btn.setOnClickListener(new View.OnClickListener() {
+      /*  btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 generateTicketNumber();
                 btn.setEnabled(false);
 
-                btnUniqueNumber.setText(GetUniqueNumber(10));
+
+                String key=databaseReference.child("U");
+
+
+                btnUniqueNumber.setText(key);
+
+
+
+
+
+
 //                DatabaseReference x= FirebaseDatabase.getInstance().getReference().child("National Lottery").child("frequency");
 //                DatabaseReference x =FirebaseDatabase.getInstance().getReference().child("Zhon Lottery Email And TicketNumber").child("uniquqNumber");
 //                String y=String.valueOf(x);
@@ -85,7 +100,29 @@ public class ZhonLottery extends AppCompatActivity {
 
 //                btnUniqueNumber.setText(z);
             }
-        });
+        });*/
+
+
+      btn.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+              generateTicketNumber();
+
+              btnReference=FirebaseDatabase.getInstance().getReference().child("Zhon Lottery Email And TicketNumber");
+              btnReference.addValueEventListener(new ValueEventListener() {
+                  @Override
+                  public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+             String btnNumber=dataSnapshot.child("uniquqNumber").getValue().toString();
+                      btnUniqueNumber.setText(btnNumber);
+                  }
+
+                  @Override
+                  public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                  }
+              });
+          }
+      });
 
     }
 
@@ -197,12 +234,15 @@ public class ZhonLottery extends AppCompatActivity {
 
 
 
-
+              String key=databaseReference.push().getKey();
 
 
               ZhonModel zhonModel = new ZhonModel(Email, myString,GetUniqueNumber(10));
-//              databaseReference.setValue(zhonModel);//to enter a value and overwrite if another is entered
-              databaseReference.push().setValue(zhonModel);//to enter unique value in the database
+              databaseReference.setValue(zhonModel);//to enter a value and overwrite if another is entered
+//              databaseReference.push().setValue(zhonModel);//to enter unique value in the database
+
+//             databaseReference.child(key).setValue(zhonModel);
+
           }
           else
           {

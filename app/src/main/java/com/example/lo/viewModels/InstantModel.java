@@ -3,15 +3,8 @@ package com.example.lo.viewModels;
 public class InstantModel {
     String emaill;
     String ticketNumberr;
+    String birrAmount;
 
-
-    public InstantModel() {
-    }
-
-    public InstantModel(String emaill, String ticketNumberr) {
-        this.emaill = emaill;
-        this.ticketNumberr = ticketNumberr;
-    }
     public String getEmaill() {
         return emaill;
     }
@@ -26,6 +19,27 @@ public class InstantModel {
 
     public void setTicketNumberr(String ticketNumberr) {
         this.ticketNumberr = ticketNumberr;
+    }
+
+    public String getBirrAmount() {
+        return birrAmount;
+    }
+
+    public void setBirrAmount(String birrAmount) {
+        this.birrAmount = birrAmount;
+    }
+
+
+
+
+
+    public InstantModel(String emaill, String ticketNumberr, String birrAmount) {
+        this.emaill = emaill;
+        this.ticketNumberr = ticketNumberr;
+        this.birrAmount = birrAmount;
+    }
+
+    public InstantModel() {
     }
 
 

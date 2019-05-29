@@ -189,8 +189,8 @@ public class EnkutatashLottery extends AppCompatActivity {
 
 
             EnkutatashModel enkutatashModel = new EnkutatashModel(Email, myString,GetUniqueNumber(10));
-//              databaseReference.setValue(zhonModel);//to enter a value and overwrite if another is entered
-            databaseReference.push().setValue(enkutatashModel);//to enter unique value in the database
+              databaseReference.setValue(enkutatashModel);//to enter a value and overwrite if another is entered
+//            databaseReference.push().setValue(enkutatashModel);//to enter unique value in the database
         }
         else
         {

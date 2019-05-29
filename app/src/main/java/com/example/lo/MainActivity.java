@@ -3,6 +3,7 @@ package com.example.lo;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +13,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity
          {
+             private static int SPLASH_TIME_OUT=4000;//4 seconds
 
     private FirebaseAuth mAuth;
     Button btnNext;
@@ -22,6 +24,23 @@ public class MainActivity extends AppCompatActivity
 //        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
         btnNext=findViewById(R.id.btnNext);
+
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+            Intent intent=new Intent(MainActivity.this,LoginActivity.class);
+            startActivity(intent);
+            finish();
+            }
+        },SPLASH_TIME_OUT);
+
+
+
+
+
+
+
 
         mAuth=FirebaseAuth.getInstance();
         //comment the below two stmts if any error happenend

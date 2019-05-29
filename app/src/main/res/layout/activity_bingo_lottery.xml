@@ -288,29 +288,31 @@
 
         </LinearLayout>
 
-        <!--<LinearLayout
+        <LinearLayout
+
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
 
+            <EditText
+                android:id="@+id/edtBingoEmail"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:hint="Enter Email"/>
             <Button
-                android:id="@+id/tryAnotherNumber"
+                android:id="@+id/btnBingoUniqueNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Try Another Ticket Number"/>
-            <Button
-                android:id="@+id/getTicketNumber"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Get Ticket Number"
-                android:onClick="toDisable"
+                android:text="Unique Number"
+
                 />
 
-        </LinearLayout>-->
+        </LinearLayout>
 
 
     </LinearLayout>
+
 
 
 

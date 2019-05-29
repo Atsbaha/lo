@@ -29,6 +29,7 @@
         android:layout_below="@+id/EnterEmail"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="107dp"
+
         />
 
     <Button
@@ -38,7 +39,8 @@
         android:text="Get Unique Number"
         android:layout_gravity="center"
         android:layout_below="@+id/btnZhonLottery"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"/>
 
 
     <LinearLayout

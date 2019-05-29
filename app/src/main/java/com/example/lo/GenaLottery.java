@@ -189,8 +189,8 @@ public class  GenaLottery extends AppCompatActivity {
 
 
             GenaModel genaModel = new GenaModel(Email, myString,GetUniqueNumber(10));
-//              databaseReference.setValue(zhonModel);//to enter a value and overwrite if another is entered
-            databaseReference.push().setValue(genaModel);//to enter unique value in the database
+              databaseReference.setValue(genaModel);//to enter a value and overwrite if another is entered
+//            databaseReference.push().setValue(genaModel);//to enter unique value in the database
         }
         else
         {
