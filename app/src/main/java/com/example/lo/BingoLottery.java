@@ -42,6 +42,7 @@ public class BingoLottery extends AppCompatActivity {
         btnUniqueNumber=findViewById(R.id.btnBingoUniqueNumber);
         edtEmail=findViewById(R.id.edtBingoEmail);
 
+
         generateAll=findViewById(R.id.generateAll);
 
 
@@ -95,26 +96,37 @@ public class BingoLottery extends AppCompatActivity {
       generateAll.setOnClickListener(new View.OnClickListener() {
           @Override
           public void onClick(View v) {
+              databaseReference=FirebaseDatabase.getInstance().getReference().child("Bingo Lottery");
+//              String Email=edtEmail.getText().toString();
+
+//              if(!Email.isEmpty()){
+
+
               generzteFirst();
               generateSecond();
               genertaeThird();
               generateFourth();
               GetUniqueNumber(10);
-              databaseReference=FirebaseDatabase.getInstance().getReference().child("Bingo Lottery");
+//              databaseReference=FirebaseDatabase.getInstance().getReference().child("Bingo Lottery");
+                  databaseReference.addValueEventListener(new ValueEventListener() {
+                      @Override
+                      public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                      String btnNumber=dataSnapshot.child("uniqueNumber").getValue().toString();
+//                      btnUniqueNumber.setText(btnNumber);
 
-              databaseReference.addValueEventListener(new ValueEventListener() {
-                  @Override
-                  public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                      String btnNumber=dataSnapshot.child("uniqueNumber").getValue().toString();
-                      btnUniqueNumber.setText(btnNumber);
+                      }
 
-                  }
+                      @Override
+                      public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                  @Override
-                  public void onCancelled(@NonNull DatabaseError databaseError) {
+                      }
+                  });
 
-                  }
-              });
+//              }
+//              else
+//                  Toast.makeText(BingoLottery.this, "Enter Email First", Toast.LENGTH_SHORT).show();
+
+
           }
       });
 
@@ -223,9 +235,10 @@ public class BingoLottery extends AppCompatActivity {
 
 
                 bingoButtons1[i][j].setText(myString);
-
-
                 String Email=edtEmail.getText().toString();
+
+
+
 
 
 

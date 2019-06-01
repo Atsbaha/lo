@@ -11,7 +11,7 @@ public class GenaModel {
     public GenaModel(String email, String ticktNumber, String uniquqNumber) {
         this.email = email;
         this.ticktNumber = ticktNumber;
-        uniquqNumber = uniquqNumber;
+        this.uniquqNumber = uniquqNumber;
     }
 
 

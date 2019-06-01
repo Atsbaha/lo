@@ -196,14 +196,14 @@
                 android:id="@+id/tryAnotherNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Another"
+                android:text="Uniqu Number"
                 />
             <!--android:onClick="compareNumber"-->
-            <Button
+            <EditText
                 android:id="@+id/viewNumber"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="View"
+                android:text="berhetewlde@gmail.com"
                 />
             <!--android:onClick="ViewNumberr"-->
             <Button

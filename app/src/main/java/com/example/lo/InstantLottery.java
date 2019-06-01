@@ -4,9 +4,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.lo.viewModels.InstantModel;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -20,7 +22,8 @@ public class InstantLottery extends AppCompatActivity{
     DatabaseReference databaseReference;
 
     private TextView txt;
-    Button tryAnotherNumber,getTicketNumber,view;
+    Button tryAnotherNumber,getTicketNumber;
+    EditText view;
     int counter=0;
 
     @Override
@@ -39,6 +42,7 @@ public class InstantLottery extends AppCompatActivity{
 
         getTicketNumber=findViewById(R.id.getTicketNumber);
         view=findViewById(R.id.viewNumber);
+        String Email=view.getText().toString();
 
         view.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,15 +50,6 @@ public class InstantLottery extends AppCompatActivity{
                 ViewNumberr();
             }
         });
-
-
-        /*tryAnotherNumber.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,layout.class);
-                startActivity(intent);
-            }
-        });*/
 
 
         getTicketNumber.setOnClickListener(new View.OnClickListener() {
@@ -125,79 +120,182 @@ public class InstantLottery extends AppCompatActivity{
                 else
                     Toast.makeText(InstantLottery.this,"Not Successful",Toast.LENGTH_SHORT).show();
                 getTicketNumber.setEnabled(false);*/
+               String Email=view.getText().toString();
 
                 ViewNumberr();
-                if(buttonsAre[3][8].equals(buttons[i][j]) || buttonsAre[3][0].equals(buttons[i][j]))
+                if(buttonsAre[3][8].getText().toString().equals(buttons[i][j].getText().toString())){
+
+
                     Toast.makeText(InstantLottery.this,"5 birr prise", Toast.LENGTH_SHORT).show();
+//                String ticketNumber=buttonsAre[3][8].getText().toString();
+                InstantModel instantModel=new InstantModel(Email,buttonsAre[3][8].getText().toString(),"5");
+                databaseReference.setValue(instantModel);//to enter a value and overwrite if another is entered
+//              databaseReference.push().setValue(zhonModel);//to enter unique value in the database
+
+//             databaseReference.child(key).setValue(zhonModel);
+                }else  Toast.makeText(InstantLottery.this,"Not Win", Toast.LENGTH_SHORT).show();
 
 
-                if(buttonsAre[0][3].equals(buttons[i][j]) &&
-                        buttonsAre[0][4].equals(buttons[i][j]) &&
-                        buttonsAre[0][5].equals(buttons[i][j]))
+                if(buttonsAre[3][0].getText().toString().equals(buttons[i][j].getText().toString())){
+
+
+                    Toast.makeText(InstantLottery.this,"5 birr prise", Toast.LENGTH_SHORT).show();
+//                String ticketNumber=buttonsAre[3][8].getText().toString();
+                    InstantModel instantModel=new InstantModel(Email,buttonsAre[3][0].getText().toString(),"5");
+                    databaseReference.setValue(instantModel);//to enter a value and overwrite if another is entered
+//              databaseReference.push().setValue(zhonModel);//to enter unique value in the database
+
+//             databaseReference.child(key).setValue(zhonModel);
+                }else  Toast.makeText(InstantLottery.this,"Not Win", Toast.LENGTH_SHORT).show();
+
+
+                if(buttonsAre[0][3].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[0][4].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[0][5].getText().toString().equals(buttons[i][j].getText().toString())){
+
+
                     Toast.makeText(InstantLottery.this,"15 birr prise", Toast.LENGTH_SHORT).show();
 
+                InstantModel instantModel=new InstantModel(Email,buttonsAre[0][3].getText().toString()+","
+                        +buttonsAre[0][4].getText().toString()+","+buttonsAre[0][5].getText().toString(),"15");
+                databaseReference.setValue(instantModel);//to enter a value and overwrite if another is entered
+//              databaseReference.push().setValue(zhonModel);//to enter unique value in the database
+
+//             databaseReference.child(key).setValue(zhonModel);
+            }else  Toast.makeText(InstantLottery.this,"Not Win", Toast.LENGTH_SHORT).show();
 
 
-                if(buttonsAre[1][2].equals(buttons[i][j]) &&
-                        buttonsAre[1][3].equals(buttons[i][j]) &&
-                        buttonsAre[1][4].equals(buttons[i][j])&&
-                        buttonsAre[1][5].equals(buttons[i][j]) &&
-                        buttonsAre[1][6].equals(buttons[i][j]))
-                Toast.makeText(InstantLottery.this,"50 birr prise", Toast.LENGTH_SHORT).show();
+
+
+                if(buttonsAre[1][2].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[1][3].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[1][4].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[1][5].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[1][6].getText().toString().equals(buttons[i][j].getText().toString())){
+                    Toast.makeText(InstantLottery.this,"50 birr prise", Toast.LENGTH_SHORT).show();
+
+                InstantModel instantModel=new InstantModel(Email,buttonsAre[1][2].getText().toString()+","
+                    +buttonsAre[1][3].getText().toString()+","+buttonsAre[1][4].getText().toString()+","+
+                    buttonsAre[1][5].getText().toString()+","+ buttonsAre[1][6].getText().toString(),"50");
+                databaseReference.setValue(instantModel);//to enter a value and overwrite if another is entered
+//              databaseReference.push().setValue(zhonModel);//to enter unique value in the database
+
+//             databaseReference.child(key).setValue(zhonModel);
+            }else  Toast.makeText(InstantLottery.this,"Not Win", Toast.LENGTH_SHORT).show();
 
 
 
 
-                if(buttonsAre[2][1].equals(buttons[i][j]) &&
-                        buttonsAre[2][2].equals(buttons[i][j]) &&
-                        buttonsAre[2][3].equals(buttons[i][j])&&
-                        buttonsAre[2][4].equals(buttons[i][j]) &&
-                        buttonsAre[2][5].equals(buttons[i][j]) &&
-                        buttonsAre[2][6].equals(buttons[i][j]) &&
-                        buttonsAre[2][7].equals(buttons[i][j]))
+                if(buttonsAre[2][1].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[2][2].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[2][3].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[2][4].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[2][5].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[2][6].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[2][7].getText().toString().equals(buttons[i][j].getText().toString()))
+                {
                     Toast.makeText(InstantLottery.this,"5000 birr prise", Toast.LENGTH_SHORT).show();
 
 
-                if(buttonsAre[3][0].equals(buttons[i][j]) &&
-                        buttonsAre[3][1].equals(buttons[i][j]) &&
-                        buttonsAre[3][2].equals(buttons[i][j])&&
-                        buttonsAre[3][3].equals(buttons[i][j]) &&
-                        buttonsAre[3][4].equals(buttons[i][j]) &&
-                        buttonsAre[3][5].equals(buttons[i][j]) &&
-                        buttonsAre[3][6].equals(buttons[i][j]) &&
-                        buttonsAre[3][7].equals(buttons[i][j]) &&
-                        buttonsAre[3][8].equals(buttons[i][j]))
+                InstantModel instantModel=new InstantModel(Email,buttonsAre[2][1].getText().toString()+","
+                        +buttonsAre[2][2].getText().toString()+","+buttonsAre[2][3].getText().toString()+","+
+                        buttonsAre[2][4].getText().toString()+","+ buttonsAre[2][5].getText().toString()+","
+                        +buttonsAre[2][6].getText().toString()+","+ buttonsAre[2][7].getText().toString(),"5000");
+                databaseReference.setValue(instantModel);//to enter a value and overwrite if another is entered
+//              databaseReference.push().setValue(zhonModel);//to enter unique value in the database
+
+//             databaseReference.child(key).setValue(zhonModel);
+            }else  Toast.makeText(InstantLottery.this,"Not Win", Toast.LENGTH_SHORT).show();
+
+
+                if(buttonsAre[3][0].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[3][1].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[3][2].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[3][3].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[3][4].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[3][5].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[3][6].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[3][7].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[3][8].getText().toString().equals(buttons[i][j].getText().toString()))
+                {
                     Toast.makeText(InstantLottery.this,"75000 birr prise", Toast.LENGTH_SHORT).show();
 
 
-                if(buttonsAre[4][1].equals(buttons[i][j]) &&
-                        buttonsAre[4][2].equals(buttons[i][j]) &&
-                        buttonsAre[4][3].equals(buttons[i][j])&&
-                        buttonsAre[4][4].equals(buttons[i][j]) &&
-                        buttonsAre[4][5].equals(buttons[i][j]) &&
-                        buttonsAre[4][6].equals(buttons[i][j]) &&
-                        buttonsAre[4][7].equals(buttons[i][j]))
+                InstantModel instantModel=new InstantModel(Email,buttonsAre[3][0].getText().toString()+","
+                        +buttonsAre[3][1].getText().toString()+","+buttonsAre[3][2].getText().toString()+","+
+                        buttonsAre[3][3].getText().toString()+","+ buttonsAre[3][4].getText().toString()+","
+                        +buttonsAre[3][5].getText().toString()+","+ buttonsAre[3][6].getText().toString()+","+
+                        buttonsAre[3][7].getText().toString()+","+buttonsAre[3][8].getText().toString(),"75000");
+                databaseReference.setValue(instantModel);//to enter a value and overwrite if another is entered
+//              databaseReference.push().setValue(zhonModel);//to enter unique value in the database
+
+//             databaseReference.child(key).setValue(zhonModel);
+            }else  Toast.makeText(InstantLottery.this,"Not Win", Toast.LENGTH_SHORT).show();
+
+
+                if(buttonsAre[4][1].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[4][2].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[4][3].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[4][4].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[4][5].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[4][6].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[4][7].getText().toString().equals(buttons[i][j].getText().toString()))
+                {
                     Toast.makeText(InstantLottery.this,"1000 birr prise", Toast.LENGTH_SHORT).show();
 
 
+                InstantModel instantModel=new InstantModel(Email,buttonsAre[4][1].getText().toString()+","
+                        + buttonsAre[4][2].getText().toString()+","+buttonsAre[4][3].getText().toString()+","+
+                        buttonsAre[4][4].getText().toString()+","+ buttonsAre[4][5].getText().toString()+","
+                        +buttonsAre[4][6].getText().toString()+","+ buttonsAre[4][7].getText().toString(),"1000");
+                databaseReference.setValue(instantModel);//to enter a value and overwrite if another is entered
+//              databaseReference.push().setValue(zhonModel);//to enter unique value in the database
 
-                if(buttonsAre[5][2].equals(buttons[i][j]) &&
-                        buttonsAre[5][3].equals(buttons[i][j]) &&
-                        buttonsAre[5][4].equals(buttons[i][j])&&
-                        buttonsAre[5][5].equals(buttons[i][j]) &&
-                        buttonsAre[5][6].equals(buttons[i][j]))
+//             databaseReference.child(key).setValue(zhonModel);
+            }else  Toast.makeText(InstantLottery.this,"Not Win", Toast.LENGTH_SHORT).show();
+
+
+
+                if(buttonsAre[5][2].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[5][3].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[5][4].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[5][5].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[5][6].getText().toString().equals(buttons[i][j].getText().toString()))
+                {
                     Toast.makeText(InstantLottery.this,"50 birr prise", Toast.LENGTH_SHORT).show();
 
 
-                if(buttonsAre[6][3].equals(buttons[i][j]) &&
-                        buttonsAre[6][4].equals(buttons[i][j]) &&
-                        buttonsAre[6][5].equals(buttons[i][j]))
+                InstantModel instantModel=new InstantModel(Email,buttonsAre[5][2].getText().toString()+","
+                        + buttonsAre[5][3].getText().toString()+","+buttonsAre[5][4].getText().toString()+","+
+                        buttonsAre[5][5].getText().toString()+","+ buttonsAre[5][6].getText().toString(),"50");
+                databaseReference.setValue(instantModel);//to enter a value and overwrite if another is entered
+//              databaseReference.push().setValue(zhonModel);//to enter unique value in the database
+
+//             databaseReference.child(key).setValue(zhonModel);
+            }else  Toast.makeText(InstantLottery.this,"Not Win", Toast.LENGTH_SHORT).show();
+
+
+                if(buttonsAre[6][3].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[6][4].getText().toString().equals(buttons[i][j].getText().toString()) &&
+                        buttonsAre[6][5].getText().toString().equals(buttons[i][j].getText().toString()))
+                {
                     Toast.makeText(InstantLottery.this,"50 birr prise", Toast.LENGTH_SHORT).show();
 
 
+                InstantModel instantModel=new InstantModel(Email,buttonsAre[6][3].getText().toString()+","
+                        + buttonsAre[6][4].getText().toString()+","+ buttonsAre[6][5].getText().toString(),"50");
+                databaseReference.setValue(instantModel);//to enter a value and overwrite if another is entered
+//              databaseReference.push().setValue(zhonModel);//to enter unique value in the database
 
-                if(buttonsAre[3][0].equals(buttons[i][j]))
+//             databaseReference.child(key).setValue(zhonModel);
+            }else  Toast.makeText(InstantLottery.this,"Not Win", Toast.LENGTH_SHORT).show();
+
+
+
+                if(buttonsAre[3][0].getText().toString().equals(buttons[i][j].getText().toString()))
                     Toast.makeText(InstantLottery.this,"5 birr prise", Toast.LENGTH_SHORT).show();
+
+
 
 
                 /*int k1=1;
@@ -208,69 +306,86 @@ public class InstantLottery extends AppCompatActivity{
                 }*/
 
 
-                if(buttonsAre[2][1].equals(buttons[i][j])&&
-                   buttonsAre[3][1].equals(buttons[i][j])&&
-                   buttonsAre[4][1].equals(buttons[i][j]))
+                if(buttonsAre[2][1].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[3][1].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[4][1].getText().toString().equals(buttons[i][j].getText().toString()))
+                {
                     Toast.makeText(InstantLottery.this,"10 birr prise", Toast.LENGTH_SHORT).show();
 
 
+                InstantModel instantModel=new InstantModel(Email,buttonsAre[2][1].getText().toString()+","
+                        + buttonsAre[3][1].getText().toString()+","+ buttonsAre[4][1].getText().toString(),"10");
+                databaseReference.setValue(instantModel);//to enter a value and overwrite if another is entered
+//              databaseReference.push().setValue(zhonModel);//to enter unique value in the database
 
-                if(buttonsAre[1][2].equals(buttons[i][j])&&
-                        buttonsAre[2][2].equals(buttons[i][j])&&
-                        buttonsAre[3][2].equals(buttons[i][j])&&
-                        buttonsAre[4][2].equals(buttons[i][j])&&
-                        buttonsAre[5][2].equals(buttons[i][j]))
+//             databaseReference.child(key).setValue(zhonModel);
+            }else  Toast.makeText(InstantLottery.this,"Not Win", Toast.LENGTH_SHORT).show();
+
+
+
+
+
+
+
+
+                //continue
+
+
+
+                if(buttonsAre[1][2].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[2][2].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[3][2].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[4][2].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[5][2].getText().toString().equals(buttons[i][j].getText().toString()))
                     Toast.makeText(InstantLottery.this,"100 birr prise", Toast.LENGTH_SHORT).show();
 
 
-                if(buttonsAre[0][3].equals(buttons[i][j])&&
-                        buttonsAre[1][3].equals(buttons[i][j])&&
-                        buttonsAre[2][3].equals(buttons[i][j])&&
-                        buttonsAre[3][3].equals(buttons[i][j])&&
-                        buttonsAre[4][3].equals(buttons[i][j])&&
-                        buttonsAre[5][3].equals(buttons[i][j])&&
-                        buttonsAre[6][3].equals(buttons[i][j]))
+                if(buttonsAre[0][3].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[1][3].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[2][3].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[3][3].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[4][3].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[5][3].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[6][3].getText().toString().equals(buttons[i][j].getText().toString()))
                     Toast.makeText(InstantLottery.this,"25,000 birr prise", Toast.LENGTH_SHORT).show();
 
 
-                if(buttonsAre[0][4].equals(buttons[i][j])&&
-                        buttonsAre[1][4].equals(buttons[i][j])&&
-                        buttonsAre[2][4].equals(buttons[i][j])&&
-                        buttonsAre[3][4].equals(buttons[i][j])&&
-                        buttonsAre[4][4].equals(buttons[i][j])&&
-                        buttonsAre[5][4].equals(buttons[i][j])&&
-                        buttonsAre[6][4].equals(buttons[i][j]))
+                if(buttonsAre[0][4].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[1][4].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[2][4].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[3][4].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[4][4].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[5][4].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[6][4].getText().toString().equals(buttons[i][j].getText().toString()))
                     Toast.makeText(InstantLottery.this,"150,000 birr prise", Toast.LENGTH_SHORT).show();
 
 
-                if(buttonsAre[0][5].equals(buttons[i][j])&&
-                        buttonsAre[1][5].equals(buttons[i][j])&&
-                        buttonsAre[2][5].equals(buttons[i][j])&&
-                        buttonsAre[3][5].equals(buttons[i][j])&&
-                        buttonsAre[4][5].equals(buttons[i][j])&&
-                        buttonsAre[5][5].equals(buttons[i][j])&&
-                        buttonsAre[6][5].equals(buttons[i][j]))
+                if(buttonsAre[0][5].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[1][5].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[2][5].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[3][5].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[4][5].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[5][5].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[6][5].getText().toString().equals(buttons[i][j].getText().toString()))
                     Toast.makeText(InstantLottery.this,"10,000 birr prise", Toast.LENGTH_SHORT).show();
 
 
 
-                if(buttonsAre[1][6].equals(buttons[i][j])&&
-                        buttonsAre[2][6].equals(buttons[i][j])&&
-                        buttonsAre[3][6].equals(buttons[i][j])&&
-                        buttonsAre[4][6].equals(buttons[i][j])&&
-                        buttonsAre[5][6].equals(buttons[i][j]))
+                if(buttonsAre[1][6].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[2][6].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[3][6].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[4][6].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[5][6].getText().toString().equals(buttons[i][j].getText().toString()))
                     Toast.makeText(InstantLottery.this,"500 birr prise", Toast.LENGTH_SHORT).show();
 
 
 
-                if(buttonsAre[2][7].equals(buttons[i][j])&&
-                        buttonsAre[3][7].equals(buttons[i][j])&&
-                        buttonsAre[4][7].equals(buttons[i][j]))
+                if(buttonsAre[2][7].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[3][7].getText().toString().equals(buttons[i][j].getText().toString())&&
+                        buttonsAre[4][7].getText().toString().equals(buttons[i][j].getText().toString()))
                     Toast.makeText(InstantLottery.this,"10 birr prise", Toast.LENGTH_SHORT).show();
 
                 //the last of this row and column is done at the beginning
-
-
 
             }
         }

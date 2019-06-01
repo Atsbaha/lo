@@ -2,27 +2,26 @@ package com.example.lo.viewModels;
 
 
 public class BingoModel {
-    String emaill;
-//    String ticketNumberr;
-    String birrAmount;
-    String uniqueNumber;
+    String emailll;
+    String birrAmountt;
+    String uniqueNumberr;
 
-    public String getUniqueNumber() {
-        return uniqueNumber;
+    public String getUniqueNumberr() {
+        return uniqueNumberr;
     }
 
-    public void setUniqueNumber(String uniqueNumber) {
-        this.uniqueNumber = uniqueNumber;
+    public void setUniqueNumberr(String uniqueNumberr) {
+        this.uniqueNumberr = uniqueNumberr;
     }
 
 
 
-    public String getEmaill() {
-        return emaill;
+    public String getEmailll() {
+        return emailll;
     }
 
-    public void setEmaill(String emaill) {
-        this.emaill = emaill;
+    public void setEmailll(String emaill) {
+        this.emailll = emaill;
     }
 
 //    public String getTicketNumberr() {
@@ -33,23 +32,23 @@ public class BingoModel {
 //        this.ticketNumberr = ticketNumberr;
 //    }
 
-    public String getBirrAmount() {
-        return birrAmount;
+    public String getBirrAmountt() {
+        return birrAmountt;
     }
 
-    public void setBirrAmount(String birrAmount) {
-        this.birrAmount = birrAmount;
+    public void setBirrAmountt(String birrAmount) {
+        this.birrAmountt = birrAmount;
     }
 
 
 
 
 
-    public BingoModel(String emaill, String birrAmount,String uniqueNumber) {
-        this.emaill = emaill;
+    public BingoModel(String emailll, String birrAmountt,String uniqueNumberr) {
+        this.emailll = emailll;
 //        this.ticketNumberr = ticketNumberr;
-        this.birrAmount = birrAmount;
-        this.uniqueNumber=uniqueNumber;
+        this.birrAmountt = birrAmountt;
+        this.uniqueNumberr=uniqueNumberr;
     }
 
     public BingoModel() {

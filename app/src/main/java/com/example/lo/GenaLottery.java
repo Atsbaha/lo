@@ -2,6 +2,7 @@ package com.example.lo;
 
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -10,8 +11,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.lo.viewModels.GenaModel;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -75,7 +79,7 @@ public class  GenaLottery extends AppCompatActivity {
 
         databaseReference= FirebaseDatabase.getInstance().getReference().child("Gena Lottery Email And TicketNumber");
 
-        btn.setOnClickListener(new View.OnClickListener() {
+      /*  btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 generateTicketNumber();
@@ -83,7 +87,31 @@ public class  GenaLottery extends AppCompatActivity {
                 btn.setVisibility(View.GONE);
 
             }
-        });
+        });*/
+
+      btn.setOnClickListener(new View.OnClickListener() {
+          @Override
+          public void onClick(View v) {
+              databaseReference= FirebaseDatabase.getInstance().getReference().child("Gena Lottery Email And TicketNumber");
+              generateTicketNumber();
+              btn.setEnabled(false);
+              btn.setVisibility(View.GONE);
+
+              databaseReference.addValueEventListener(new ValueEventListener() {
+                  @Override
+                  public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                      String btnNumber=dataSnapshot.child("uniquqNumber").getValue().toString();
+                      btnUniqueNumber.setText(btnNumber);
+                  
+                  }
+
+                  @Override
+                  public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                  }
+              });
+          }
+      });
 
     }
 

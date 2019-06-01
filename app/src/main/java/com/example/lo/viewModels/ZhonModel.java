@@ -6,13 +6,24 @@ public class ZhonModel {
     String email;
     String ticktNumber;
     String uniquqNumber;
+    String etaNumber;
+
+    public String getEtaNumber() {
+        return etaNumber;
+    }
+
+    public void setEtaNumber(String etaNumber) {
+        this.etaNumber = etaNumber;
+    }
+
     public ZhonModel() {
     }
 
-    public ZhonModel(String email, String ticktNumber,String uniquqNumber) {
+    public ZhonModel(String email, String ticktNumber,String uniquqNumber,String etaNumber) {
         this.email = email;
         this.ticktNumber = ticktNumber;
         this.uniquqNumber=uniquqNumber;
+        this.etaNumber=etaNumber;
     }
 
 
