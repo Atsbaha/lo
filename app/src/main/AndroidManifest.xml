@@ -13,7 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".TombolaLottery"></activity>
+        <activity android:name=".EdlLottery"></activity>
+        <activity android:name=".TinsaeeLottery" />
+        <activity android:name=".Lyu2Lottery" />
+        <activity android:name=".Lyu1Lottery" />
+        <activity android:name=".TombolaLottery" />
         <activity android:name=".SignUpAndSignInActivity" />
         <activity android:name=".Payment2" />
         <activity android:name=".GenaLottery" />
