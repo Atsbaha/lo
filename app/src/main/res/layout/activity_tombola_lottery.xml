@@ -1,9 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".TombolaLottery">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/TombolatextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Ticket Number"
+        android:textSize="30sp"
+        />
+    <EditText
+        android:id="@+id/EnterTombolaEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TombolatextView"
+        android:text="berheteweld@gmail.com"
+        android:layout_marginTop="80dp"/>
+
+    <Button
+        android:id="@+id/btnTombolaLottery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Ticket Number"
+        android:layout_below="@+id/EnterTombolaEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="107dp"
+
+        />
+
+    <Button
+        android:id="@+id/btnTombolaUniqueNumber"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Get Unique Number"
+        android:layout_gravity="center"
+        android:layout_below="@+id/btnTombolaLottery"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"/>
+
+
+    <LinearLayout
+        android:id="@+id/TombolareadAndWrite"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnTombolaUniqueNumber">
+        <Button
+            android:id="@+id/btnTombolaWrite"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Save Ticket Number"
+            android:layout_gravity="center"
+            android:layout_below="@+id/btnTombolaLottery"
+            android:layout_marginTop="20dp"
+
+            />
+        <!-- android:onClick="writeExternalMessage"-->
+        <Button
+            android:id="@+id/btnTombolaRead"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Insert Ticket Number"
+            android:layout_gravity="center"
+            android:layout_below="@+id/btnTombolaWrite"
+            android:layout_marginTop="20dp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/TombolaNumberShower"
+        android:layout_below="@+id/TombolareadAndWrite"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Number here"/>
+
+
+    />
+
+
+</RelativeLayout>

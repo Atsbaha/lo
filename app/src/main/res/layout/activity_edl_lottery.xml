@@ -1,9 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".EdlLottery">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/EdltextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Ticket Number"
+        android:textSize="30sp"
+        />
+    <EditText
+        android:id="@+id/EnterEdlEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:text="berheteweld@gmail.com"
+        android:layout_marginTop="80dp"/>
+
+    <Button
+        android:id="@+id/btnEdlLottery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Ticket Number"
+        android:layout_below="@+id/EnterEdlEmail"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="107dp"
+
+        />
+
+    <Button
+        android:id="@+id/btnEdlUniqueNumber"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Get Unique Number"
+        android:layout_gravity="center"
+        android:layout_below="@+id/btnEdlLottery"
+        android:layout_marginTop="20dp"
+        android:textAllCaps="false"/>
+
+
+    <LinearLayout
+        android:id="@+id/EdlreadAndWrite"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnEdlUniqueNumber">
+        <Button
+            android:id="@+id/btnEdlWrite"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Save Ticket Number"
+            android:layout_gravity="center"
+            android:layout_below="@+id/btnEdlLottery"
+            android:layout_marginTop="20dp"
+
+            />
+        <!-- android:onClick="writeExternalMessage"-->
+        <Button
+            android:id="@+id/btnEdlRead"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Insert Ticket Number"
+            android:layout_gravity="center"
+            android:layout_below="@+id/btnEdlWrite"
+            android:layout_marginTop="20dp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/EdlNumberShower"
+        android:layout_below="@+id/EdlreadAndWrite"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Number here"/>
+
+
+    />
+
+
+</RelativeLayout>

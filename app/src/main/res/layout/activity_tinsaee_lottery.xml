@@ -4,76 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Lyu1Lottery">
+    tools:context=".TinsaeeLottery">
 
     <TextView
-        android:id="@+id/Lyu1textView"
+        android:id="@+id/TinsaeetextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Your Ticket Number"
         android:textSize="30sp"
         />
     <EditText
-        android:id="@+id/EnterLyu1Email"
+        android:id="@+id/EnterTinsaeeEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Lyu1textView"
+        android:layout_below="@+id/TinsaeetextView"
         android:text="berheteweld@gmail.com"
         android:layout_marginTop="80dp"/>
 
     <Button
-        android:id="@+id/btnLyu1Lottery"
+        android:id="@+id/btnTinsaeeLottery"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Get Ticket Number"
-        android:layout_below="@+id/EnterLyu1Email"
+        android:layout_below="@+id/EnterTinsaeeEmail"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="107dp"
 
         />
 
     <Button
-        android:id="@+id/btnLyu1UniqueNumber"
+        android:id="@+id/btnTinsaeeUniqueNumber"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="Get Unique Number"
         android:layout_gravity="center"
-        android:layout_below="@+id/btnLyu1Lottery"
+        android:layout_below="@+id/btnTinsaeeLottery"
         android:layout_marginTop="20dp"
         android:textAllCaps="false"/>
 
 
     <LinearLayout
-        android:id="@+id/Lyu1readAndWrite"
+        android:id="@+id/TinsaeereadAndWrite"
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/btnLyu1UniqueNumber">
+        android:layout_below="@+id/btnTinsaeeUniqueNumber">
         <Button
-            android:id="@+id/btnLyu1Write"
+            android:id="@+id/btnTinsaeeWrite"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="Save Ticket Number"
             android:layout_gravity="center"
-            android:layout_below="@+id/btnLyu1Lottery"
+            android:layout_below="@+id/btnTinsaeeLottery"
             android:layout_marginTop="20dp"
 
             />
         <!-- android:onClick="writeExternalMessage"-->
         <Button
-            android:id="@+id/btnLyu1Read"
+            android:id="@+id/btnTinsaeeRead"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="Insert Ticket Number"
             android:layout_gravity="center"
-            android:layout_below="@+id/btnLyu1Write"
+            android:layout_below="@+id/btnTinsaeeWrite"
             android:layout_marginTop="20dp"
             />
     </LinearLayout>
 
     <TextView
-        android:id="@+id/Lyu1NumberShower"
-        android:layout_below="@+id/Lyu1readAndWrite"
+        android:id="@+id/TinsaeeNumberShower"
+        android:layout_below="@+id/TinsaeereadAndWrite"
         android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
