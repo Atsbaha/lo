@@ -25,7 +25,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.lo.viewModels.ZhonModel;
+import com.example.lo.viewModels.TombolaModel;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -60,13 +60,13 @@ public class TombolaLottery extends AppCompatActivity {
 
 
 
-        btnTombola=findViewById(R.id.btnZhonLottery);
-        EnterTombolaEmail=(EditText)findViewById(R.id.EnterEmail);
-        Tombolarandom=(TextView)findViewById(R.id.textView);
+        btnTombola=findViewById(R.id.btnTombolaLottery);
+        EnterTombolaEmail=(EditText)findViewById(R.id.EnterTombolaEmail);
+        Tombolarandom=(TextView)findViewById(R.id.TombolatextView);
 
 
-        btnTombolaWrite=findViewById(R.id.btnWrite);
-        btnTombolaRead=findViewById(R.id.btnRead);
+        btnTombolaWrite=findViewById(R.id.btnTombolaWrite);
+        btnTombolaRead=findViewById(R.id.btnTombolaRead);
         TombolatxtView=findViewById(R.id.TombolaNumberShower);
 
         btnTombolaUniqueNumber=findViewById(R.id.btnTombolaUniqueNumber);
@@ -254,7 +254,7 @@ public class TombolaLottery extends AppCompatActivity {
             Random rand=new Random();
             int number=rand.nextInt(999999999) + 100000000;
 
-            TextView mytext=(TextView)findViewById(R.id.textView);
+            TextView mytext=(TextView)findViewById(R.id.TombolatextView);
             String myString=String.valueOf(number);//this is used to convert the number to String since TextView Displays Text
             mytext.setText(myString);
 
@@ -268,8 +268,8 @@ public class TombolaLottery extends AppCompatActivity {
             String key=databaseReference.push().getKey();
 
             String andegnaEta="Andegna Eta";
-            ZhonModel zhonModel = new ZhonModel(Email, myString,GetUniqueNumber(10),andegnaEta);
-            databaseReference.setValue(zhonModel);//to enter a value and overwrite if another is entered
+            TombolaModel tombolaModel = new TombolaModel(Email, myString,GetUniqueNumber(10),andegnaEta);
+            databaseReference.setValue(tombolaModel);//to enter a value and overwrite if another is entered
 //              databaseReference.push().setValue(zhonModel);//to enter unique value in the database
 
 //             databaseReference.child(key).setValue(zhonModel);

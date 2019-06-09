@@ -256,7 +256,7 @@ public class Lyu2Lottery extends AppCompatActivity {
             Random rand=new Random();
             int number=rand.nextInt(999999999) + 100000000;
 
-            TextView mytext=(TextView)findViewById(R.id.textView);
+            TextView mytext=(TextView)findViewById(R.id.Lyu2textView);
             String myString=String.valueOf(number);//this is used to convert the number to String since TextView Displays Text
             mytext.setText(myString);
 

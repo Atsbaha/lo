@@ -91,9 +91,15 @@ public class LoginActivity extends AppCompatActivity {
 //                                Toast.makeText(LoginActivity.this,"successfull",Toast.LENGTH_LONG).show();
 
                                 //i added this see it
-                                Intent intent=new Intent(LoginActivity.this,Payment.class);
-//                                Intent intent=new Intent(LoginActivity.this,Payment2.class);
+//                                Intent intent=new Intent(LoginActivity.this,Payment.class);
+////                                Intent intent=new Intent(LoginActivity.this,Payment2.class);
+//                                startActivity(intent);
+
+                                Intent intent=new Intent(LoginActivity.this,ChoosingLottery.class);
+////                                Intent intent=new Intent(LoginActivity.this,Payment2.class);
                                 startActivity(intent);
+
+
                             }else{
                                 String errorMessage=task.getException().getMessage();
                                 Toast.makeText(LoginActivity.this,"error :"+errorMessage,Toast.LENGTH_LONG).show();

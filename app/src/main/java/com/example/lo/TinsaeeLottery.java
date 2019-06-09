@@ -93,7 +93,7 @@ public class TinsaeeLottery extends AppCompatActivity {
                 btnTinsaeeReference.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String btnNumber=dataSnapshot.child("uniquqNumber").getValue().toString();
+                        String btnNumber=dataSnapshot.child("tinsaeeuniquqNumber").getValue().toString();
                         btnTinsaeeUniqueNumber.setText(btnNumber);
                     }
 

@@ -48,7 +48,7 @@ public class Lyu1Lottery extends AppCompatActivity {
 
         btnLyu1=findViewById(R.id.btnLyu1Lottery);
         EnterLyu1Email=(EditText)findViewById(R.id.EnterLyu1Email);
-        Lyu1random=(TextView)findViewById(R.id.EdltextView);
+        Lyu1random=(TextView)findViewById(R.id.Lyu1textView);
 
 
         btnLyu1Write=findViewById(R.id.btnLyu1Write);
@@ -242,7 +242,7 @@ public class Lyu1Lottery extends AppCompatActivity {
             Random rand=new Random();
             int number=rand.nextInt(999999999) + 100000000;
 
-            TextView mytext=(TextView)findViewById(R.id.EdltextView);
+            TextView mytext=(TextView)findViewById(R.id.Lyu1textView);
             String myString=String.valueOf(number);//this is used to convert the number to String since TextView Displays Text
             mytext.setText(myString);
 
