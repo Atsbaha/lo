@@ -41,32 +41,43 @@ public class ChoosingLottery extends AppCompatActivity {
             public void onClick(View v) {
                 if(zhonCheckBox.isChecked() && !enkutatashCheckBox.isChecked()
                         && !genaCheckBox.isChecked() && !fetanCheckBox.isChecked() && !othersCheckBox.isChecked()){
-                    Intent intent=new Intent(ChoosingLottery.this,EachPayment.class);
+                    Intent intent=new Intent(ChoosingLottery.this,ZhonLottery.class);
+
                     startActivity(intent);
+
+//                    String zhon="zhon";
+//                    intent.putExtra(zhon,"zhon");
+//
+
                 }
 
                 else if(!zhonCheckBox.isChecked() && enkutatashCheckBox.isChecked()
                         && !genaCheckBox.isChecked() && !fetanCheckBox.isChecked() && !othersCheckBox.isChecked()){
-                    Intent intent=new Intent(ChoosingLottery.this,EachPayment.class);
+                    Intent intent=new Intent(ChoosingLottery.this,EnkutatashLottery.class);
                     startActivity(intent);
+
+
+//                    String enkutatash="enkutatash";
+//                    intent.putExtra(enkutatash,"enkutatash");
+//
                 }
 
                 else if(!zhonCheckBox.isChecked() && !enkutatashCheckBox.isChecked()
                         && genaCheckBox.isChecked() && !fetanCheckBox.isChecked() && !othersCheckBox.isChecked()){
-                    Intent intent=new Intent(ChoosingLottery.this,EachPayment.class);
+                    Intent intent=new Intent(ChoosingLottery.this,GenaLottery.class);
                     startActivity(intent);
                 }
 
 
                 else if(!zhonCheckBox.isChecked() && !enkutatashCheckBox.isChecked()
                         && !genaCheckBox.isChecked() && fetanCheckBox.isChecked() && !othersCheckBox.isChecked()){
-                    Intent intent=new Intent(ChoosingLottery.this,EachPayment.class);
+                    Intent intent=new Intent(ChoosingLottery.this,IntentToAllFetanLottery.class);
                     startActivity(intent);
                 }
 
                 else if(!zhonCheckBox.isChecked() && !enkutatashCheckBox.isChecked()
                         && !genaCheckBox.isChecked() && !fetanCheckBox.isChecked() && othersCheckBox.isChecked()){
-                    Intent intent=new Intent(ChoosingLottery.this,OtherLotteryTypes.class);
+                    Intent intent=new Intent(ChoosingLottery.this,ChoosingOthersLottery.class);
                     startActivity(intent);
                 }
                 else{

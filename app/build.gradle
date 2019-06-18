@@ -64,6 +64,9 @@ dependencies {
     implementation 'com.firebaseui:firebase-ui-database:1.2.0'
     implementation 'com.google.firebase:firebase-core:16.0.9'
 
+
+    implementation 'io.paperdb:paperdb:2.1'
+
     //for yene pay
     implementation 'com.github.YenePay:yenepay.sdk.android:0.0.7'
 

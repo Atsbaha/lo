@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Instruction"
+    android:orientation="vertical">
+
+
+
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--&gt;-->
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        android:id="@+id/mejemerya"
+       >
+
+
+
+    <Button
+        android:id="@+id/ፈጣን"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:text="Instant lottery"
+        
+        android:textColor="@color/white"
+        android:background="@drawable/btn_background"
+        android:textStyle="italic|bold"
+
+        />
+
+    <Button
+        android:id="@+id/ቢንጎ"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:text="Bingo"
+       
+        android:textColor="@color/white"
+        android:background="@drawable/btn_background"
+        android:textStyle="italic|bold"
+
+
+        />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        >
+
+
+
+        <Button
+            android:id="@+id/ዝሆን"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:text="Zhon lottery"
+           
+            android:textColor="@color/white"
+            android:background="@drawable/btn_background"
+            android:textStyle="italic|bold"
+
+            />
+
+        <Button
+            android:id="@+id/እንቁጣጣሽ"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:text="Enkutatash lottery"
+            android:layout_marginTop="0sp"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_background"
+            android:textStyle="italic|bold"
+
+
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        >
+
+
+
+        <Button
+            android:id="@+id/ልዩአንድ"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:text="Lyu1 lottery"
+            android:layout_marginTop="0sp"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_background"
+            android:textStyle="italic|bold"
+
+            />
+
+        <Button
+            android:id="@+id/ልዩሁለት"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:text="Lyu2 Lottery"
+            android:layout_marginTop="0sp"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_background"
+            android:textStyle="italic|bold"
+
+
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        >
+
+
+
+        <Button
+            android:id="@+id/ዕድል"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:text="Edl lottery"
+            android:layout_marginTop="0sp"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_background"
+            android:textStyle="italic|bold"
+
+            />
+
+        <Button
+            android:id="@+id/ቶምቦላ"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:text="Tombola lottery"
+            android:layout_marginTop="0sp"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_background"
+            android:textStyle="italic|bold"
+
+
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="horizontal"
+        >
+
+
+
+        <Button
+            android:id="@+id/ትንሣኤ"
+            android:layout_width="200dp"
+            android:layout_height="80dp"
+            android:text="Tinsaee lottery"
+            android:layout_marginTop="0sp"
+            android:textColor="@color/white"
+            android:background="@drawable/btn_background"
+            android:textStyle="italic|bold"
+
+            />
+
+        <!--<Button-->
+            <!--android:id="@+id/ቢንጎ"-->
+            <!--android:layout_width="200dp"-->
+            <!--android:layout_height="80dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:text="Bingo"-->
+            <!--android:layout_marginTop="0sp"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:background="@drawable/btn_background"-->
+            <!--android:textStyle="italic|bold"-->
+
+
+            <!--/>-->
+
+
+
+
+    </LinearLayout>
+
+    <!--</ScrollView>-->
+
+
+
+</LinearLayout>

@@ -18,7 +18,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class AllOperations extends AppCompatActivity {
 
     private Button btnChangeEmail, btnChangePassword, btnSendResetEmail, btnRemoveUser,
-            changeEmail, changePassword, sendEmail, remove, signOut,nextButton;
+            changeEmail, changePassword, sendEmail, remove, signOut,nextButton,btnInstruction;
 
     private EditText oldEmail, newEmail, password, newPassword;
     private ProgressBar progressBar;
@@ -38,10 +38,24 @@ public class AllOperations extends AppCompatActivity {
         setSupportActionBar(toolbar);*/
 
         nextButton=findViewById(R.id.nextButton);
+
+        btnInstruction=findViewById(R.id.btnInstruction);
+
+
+
+        btnInstruction.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(AllOperations.this,Instruction.class);
+                startActivity(intent);
+            }
+        });
+
+
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(AllOperations.this,IntentToLotteryTypes.class);
+                Intent intent=new Intent(AllOperations.this,ChoosingLottery.class);
                 startActivity(intent);
             }
         });

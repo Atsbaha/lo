@@ -77,10 +77,29 @@
         android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your Number here"/>
+        android:text="Next"/>
 
 
         />
+
+
+
+    <Button
+        android:id="@+id/zhonNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        android:layout_below="@+id/NumberShower"/>
+
+    <Button
+        android:id="@+id/btnOrderNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="get Order Number"
+        android:layout_marginLeft="200dp"
+        android:layout_below="@+id/NumberShower"/>
+
+
 
 
 </RelativeLayout>

@@ -1,5 +1,6 @@
 package com.example.lo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.NonNull;
@@ -11,6 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.lo.Common.Common;
 import com.example.lo.viewModels.ZhonModel;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -28,9 +30,10 @@ import java.io.InputStreamReader;
 import java.util.Random;
 
 public class ZhonLottery extends AppCompatActivity {
-    Button btn,btnWrite,btnRead,btnUniqueNumber,btnZhonChecking;
+    Button btn,btnWrite,btnRead,btnUniqueNumber,btnZhonChecking,zhonNext,btnOrderNumber;
     EditText EnterEmail,edtZhonChecking;
     TextView random,txtView;
+    long maxId=0;
 
 
 
@@ -44,11 +47,15 @@ public class ZhonLottery extends AppCompatActivity {
         btnZhonChecking=findViewById(R.id.btnZhonChecking);
         edtZhonChecking=findViewById(R.id.edtZhonChecking);
 
+        btnOrderNumber=findViewById(R.id.btnOrderNumber);
+
 
 
         btn=findViewById(R.id.btnZhonLottery);
         EnterEmail=(EditText)findViewById(R.id.EnterEmail);
         random=(TextView)findViewById(R.id.textView);
+
+        zhonNext=findViewById(R.id.zhonNext);
 
 
         btnWrite=findViewById(R.id.btnWrite);
@@ -64,7 +71,16 @@ public class ZhonLottery extends AppCompatActivity {
                 writeExternalMessage();
             }
         });
-        
+
+
+
+        zhonNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(ZhonLottery.this,EachPayment.class);
+                startActivity(intent);
+            }
+        });
         btnRead.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,18 +105,55 @@ public class ZhonLottery extends AppCompatActivity {
               CheckrResult();
 
               btnReference=FirebaseDatabase.getInstance().getReference().child("Zhon Lottery Email And TicketNumber");
-              btnReference.addValueEventListener(new ValueEventListener() {
-                  @Override
-                  public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-             String btnNumber=dataSnapshot.child("uniquqNumber").getValue().toString();
-                      btnUniqueNumber.setText(btnNumber);
-                  }
+//              btnReference.addValueEventListener(new ValueEventListener() {
+//                  @Override
+//                  public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//
+//                      if(dataSnapshot.exists())
+////                      {
+//                       maxId=dataSnapshot.getChildrenCount();
+////            String orderNumber=dataSnapshot.child(String.valueOf(maxId)).getValue().toString();
+////
+////             String btnNumber=dataSnapshot.child(String.valueOf(maxId++)).child("uniquqNumber").getValue().toString();
+////                      btnUniqueNumber.setText(btnNumber);
+////
+////                      btnOrderNumber.setText(orderNumber);
+////                      }
+//
+//
+//
+//
+//
+//
+//                  }
+//
+//                  @Override
+//                  public void onCancelled(@NonNull DatabaseError databaseError) {
+//
+//                  }
+//              });
 
-                  @Override
-                  public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                  }
-              });
+
+
+
+//change the below to addValueEventListener if not works
+ btnReference.addListenerForSingleValueEvent(new ValueEventListener() {
+     @Override
+     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+         if(dataSnapshot.child(Common.currentUser.getPhone()).exists()){
+             String btnNumber=dataSnapshot.child(Common.currentUser.getPhone()).child("uniquqNumber").getValue().toString();
+                     btnUniqueNumber.setText(btnNumber);
+
+         }
+     }
+
+     @Override
+     public void onCancelled(@NonNull DatabaseError databaseError) {
+
+     }
+ });
+
           }
       });
 
@@ -251,11 +304,20 @@ public class ZhonLottery extends AppCompatActivity {
 
 
 
-              String key=databaseReference.push().getKey();
+//              String key=databaseReference.push().getKey();
 
               String andegnaEta="Andegna Eta";
               ZhonModel zhonModel = new ZhonModel(Email, myString,GetUniqueNumber(10),andegnaEta);
-              databaseReference.setValue(zhonModel);//to enter a value and overwrite if another is entered
+//              String x=String.valueOf(maxId+1);
+
+//              databaseReference.child(x).setValue(zhonModel);
+
+             databaseReference.child(Common.currentUser.getPhone()).setValue(zhonModel);
+
+
+
+
+//              databaseReference.setValue(zhonModel);//to enter a value and overwrite if another is entered
 //              databaseReference.push().setValue(zhonModel);//to enter unique value in the database
 
 //             databaseReference.child(key).setValue(zhonModel);

@@ -13,7 +13,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EachPayment"></activity>
+        <activity android:name=".SignUp"></activity>
+		<activity android:name=".SignIn"></activity>
+		
+        <activity android:name=".Help" />
+        <activity android:name=".EachPaymentt2" />
+        <activity android:name=".EachPayment" />
         <activity android:name=".ChoosingOthersLottery" />
         <activity android:name=".ChoosingLottery" />
         <activity android:name=".TinsaeeLottery" />
@@ -36,6 +41,7 @@
         <activity android:name=".ResetPasswordActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
+        <activity android:name=".Instruction"></activity>
         <!--
 <service
             android:name=".viewModels.MyService"

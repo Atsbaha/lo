@@ -28,6 +28,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/bingoCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <Button
             android:id="@+id/btnBingo"
             android:text="Bingo Lottery"
@@ -38,6 +43,11 @@
             android:textColor="@color/white"
             android:background="@drawable/btn_background"
             />
+
+        <CheckBox
+            android:id="@+id/NationalLotteryCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <Button
             android:id="@+id/btnNationalLottery"
             android:text="National Lottery"
@@ -56,6 +66,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/firstLinear">
 
+        <CheckBox
+            android:id="@+id/fetanCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
         <Button
             android:id="@+id/btnFetanLottery"
             android:text="FetanLottery"
@@ -65,6 +80,21 @@
             android:textColor="@color/white"
             android:textStyle="bold|italic"
             android:background="@drawable/btn_background"/>
+
+        <Button
+            android:id="@+id/btnhelp"
+            android:text="help"
+            android:layout_marginLeft="20dp"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:background="@drawable/btn_background"/>
+
+
+
+
         <!-- <Button
              android:id="@+id/btnFetan"
              android:text="Fetan Lottery"
@@ -79,18 +109,22 @@
  -->
 
     </LinearLayout>
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/secondLinear">
-        <!--<Button-->
-        <!--android:id="@+id/btnTableReservation"-->
-        <!--android:layout_width="0dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_weight="1"-->
-        <!--android:background="@drawable/button_background"-->
-        <!--android:text="Table Reservation"-->
-        <!--android:textStyle="bold|italic" />-->
+        <Button
+            android:id="@+id/btnFetanNext"
+            android:text="Next"
+            android:layout_marginLeft="20dp"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:textStyle="bold|italic"
+            android:background="@drawable/btn_background"/>
 
     </LinearLayout>
 

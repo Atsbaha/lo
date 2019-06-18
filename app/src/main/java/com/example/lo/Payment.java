@@ -39,8 +39,22 @@ public class Payment extends AppCompatActivity {
         btnNumber.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(Payment.this,AllOperations.class);
-                startActivity(intent);
+
+                final String number = phone.getText().toString();
+                final String number2 = amountt.getText().toString();
+                final String number3 = pinn.getText().toString();
+
+
+                if(!number.isEmpty() &&!number2.isEmpty() && !number3.isEmpty()){
+
+
+//                Intent intent =new Intent(Payment.this,ZhonLottery.class);
+//                startActivity(intent);
+                Toast.makeText(Payment.this, "Thank you You have finished ", Toast.LENGTH_SHORT).show();
+                }
+                else
+                    Toast.makeText(Payment.this, "Each Field Is Required", Toast.LENGTH_SHORT).show();
+
             }
         });
 

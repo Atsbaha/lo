@@ -95,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
 ////                                Intent intent=new Intent(LoginActivity.this,Payment2.class);
 //                                startActivity(intent);
 
-                                Intent intent=new Intent(LoginActivity.this,ChoosingLottery.class);
+                                Intent intent=new Intent(LoginActivity.this,AllOperations.class);
 ////                                Intent intent=new Intent(LoginActivity.this,Payment2.class);
                                 startActivity(intent);
 

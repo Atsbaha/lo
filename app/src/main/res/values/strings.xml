@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">lo</string>
+
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -167,6 +173,16 @@
     <string name="lbl_forgot_password">Forgot password?</string>
     <string name="prompt_password">password</string>
     <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
+
+
+    <string name="help">You should pay 5 birr for Every feten lottery \n
+    Every fetan lottery weighes depending on the type you are playing </string>
+	
+	
+    <string name="forget_pwd"><u>Forget Password?</u></string>
+
+    <string name="phone_number">Phone Number</string>
+    <string name="secure_code">Secure Code</string>
 
 
 </resources>
